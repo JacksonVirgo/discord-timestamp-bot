@@ -21,6 +21,11 @@ export class SlashCommand extends SlashCommandBuilder {
 		console.log("Created new slash command: " + name);
 	}
 
+	public setComponents(func: (builder: SlashCommandBuilder) => void) {
+		func(this);
+		return this;
+	}
+
 	public onRun(func: SlashCommandExecute) {
 		this.funcOnRun = func;
 	}
