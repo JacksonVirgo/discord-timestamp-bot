@@ -1,5 +1,5 @@
-import { startDiscordBot } from "./app/discord.ts";
+import mount from "./app/mount.ts";
 
 if (import.meta.main) {
-	startDiscordBot();
+	mount();
 }

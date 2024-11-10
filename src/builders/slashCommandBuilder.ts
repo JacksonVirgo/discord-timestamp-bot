@@ -16,7 +16,9 @@ export class SlashCommand extends SlashCommandBuilder {
 		super();
 		if (SlashCommand.slashCommands.has(name))
 			throw new Error("SlashCommand with name: " + name + " already exists");
+		SlashCommand.slashCommands.set(name, this);
 		this.setName(name).setDescription("No description provided.");
+		console.log("Created new slash command: " + name);
 	}
 
 	public onRun(func: SlashCommandExecute) {
