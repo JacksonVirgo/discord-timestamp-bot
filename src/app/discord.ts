@@ -15,5 +15,4 @@ export async function startDiscordBot() {
 		console.log(`${client.user.username} is now loaded.`);
 	});
 	await client.login(config.DISCORD_TOKEN);
-	4;
 }
