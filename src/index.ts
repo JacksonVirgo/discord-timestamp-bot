@@ -1,4 +1,6 @@
+import discord from "discord.js";
+import { startDiscordBot } from "./app/discord.ts";
+
 if (import.meta.main) {
-	const discordToken = Deno.env.get("DISCORD_TOKEN");
-	console.log(discordToken);
+	startDiscordBot();
 }
