@@ -1,3 +1,4 @@
 if (import.meta.main) {
-  console.log("Hello, world!");
+  const discordToken = Deno.env.get("DISCORD_TOKEN");
+  console.log(discordToken);
 }
